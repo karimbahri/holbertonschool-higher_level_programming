@@ -2,4 +2,4 @@
 
 import string
 
-print(string.ascii_uppercase)
+print("%s" % string.ascii_uppercase)
