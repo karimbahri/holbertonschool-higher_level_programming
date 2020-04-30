@@ -1,15 +1,6 @@
 #!/usr/bin/python3
 
 if __name__ == "__main__":
-    def checkOperator(Op):
-        opIndex = 1
-        for i in "+-*/:
-            if Op == i:
-                return opIndex
-            opIndex += 1
-
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
 
     from sys import argv
     from calculator_1 import add, sub, mul, div
@@ -20,20 +11,21 @@ if __name__ == "__main__":
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    op = checkOperator(argv[2])
-
     a = int(argv[1])
     b = int(argv[3])
 
     result = 0
 
-    if op == 1:
+    if argv[2] == "+":
         result = add(a, b)
-    elif op == 2:
+    elif argv[2] == "-":
         result = sub(a, b)
-    elif op == 3:
+    elif argv[2] == "*":
         result = mul(a, b)
-    elif op == 4:
+    elif argv[2] == "/":
         result = div(a, b)
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
 
     print("{} {} {} = {}".format(a, argv[2], b, result))
