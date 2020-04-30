@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-import add_0 as opLib
+from add_0 import add
 
 a = 1
 b = 2
 
-print("<a {:d}> + <b {:d}> = <add(a, b) {:d}>".format(a, b, opLib.add(a, b)))
+print("{:d} + {:d} = {:d}".format(a, b, add(a, b)))
