@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 
-
-def checkOperator(Op):
-    opIndex = 1
-    for i in "+-*/:
-        if Op == i:
-            return opIndex
-        opIndex += 1
-
-    print("Unknown operator. Available operators: +, -, * and /")
-    exit(1)
-
 if __name__ == "__main__":
+    def checkOperator(Op):
+        opIndex = 1
+        for i in "+-*/:
+            if Op == i:
+                return opIndex
+            opIndex += 1
+
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
+
     from sys import argv
     from calculator_1 import add, sub, mul, div
 
