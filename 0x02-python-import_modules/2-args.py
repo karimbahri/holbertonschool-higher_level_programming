@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 
+if __name__ == "__main__":
+    from sys import argv
 
-from sys import argv
+    length = len(argv)
 
-length = len(argv)
-
-if length == 1:
-    print("0 arguments.")
-else:
-    print("{}".format(length - 1), end=" ")
-
-    if length == 2:
-        print("argument:")
+    if length == 1:
+        print("0 arguments.")
     else:
-        print("arguments:")
+        print("{}".format(length - 1), end=" ")
 
-    for i in range(1, length):
-        print("{:d} : {}".format(i, argv[i]))
+        if length == 2:
+            print("argument:")
+        else:
+            print("arguments:")
+
+        for i in range(1, length):
+            print("{:d} : {}".format(i, argv[i]))
