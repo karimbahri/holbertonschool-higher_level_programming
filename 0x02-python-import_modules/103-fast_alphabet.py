@@ -1,5 +1,3 @@
 #!/usr/bin/python3
-
 import string
-
-print(string.ascii_uppercase)
+print("%s" % (string.ascii_uppercase))
