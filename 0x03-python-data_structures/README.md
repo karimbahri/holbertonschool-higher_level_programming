@@ -1,0 +1,3 @@
+PYTHON DATE STRUCTURE :
+						LISTS
+						TUPLES
