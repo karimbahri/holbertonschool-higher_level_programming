@@ -8,4 +8,5 @@ def print_matrix_integer(matrix=[[]]):
                 print("{:d}".format(column), end="")
                 if column != line[len(line) - 1]:
                     print(" ", end="")
-            print("$")
+
+            print("")
