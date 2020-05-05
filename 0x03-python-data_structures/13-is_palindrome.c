@@ -30,7 +30,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *node;
+	listint_t *node, *pos_node;
 	size_t list_length = 0, i = 0;
 	bool palindrome_bool = TRUE;
 
@@ -43,8 +43,9 @@ int is_palindrome(listint_t **head)
 
 	while (i != (list_length / 2) - 1)
 	{
-		if (node->n != get_nodeint_at_index(*head, list_length - 1 - i)->n)
-			return (palindrome_bool = FALSE);
+		pos_node = get_nodeint_at_index(*head, list_length - 1 - i)
+		if (node->n != pos_node->n)
+			return (FALSE);
 
 		i++;
 		node = node->next;
