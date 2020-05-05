@@ -34,8 +34,8 @@ int is_palindrome(listint_t **head)
 	size_t list_length = 0, i = 0;
 	bool palindrome_bool = TRUE;
 
-	if (!head)
-		return (0);
+	if (!head || !*head)
+		return (1);
 
 	node = *head;
 
