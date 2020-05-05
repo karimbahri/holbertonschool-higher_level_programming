@@ -46,7 +46,7 @@ int is_palindrome(listint_t **head)
 
 	while (i < (list_length / 2))
 	{
-		pos_node = get_nodeint_at_index(*head, list_length - 1 - i);
+		pos_node = get_nodeint_at_index((*head)->next, list_length - 2 - i);
 		if (node->n != pos_node->n)
 			return (FALSE);
 
