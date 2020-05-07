@@ -9,4 +9,5 @@ def uniq_add(my_list=[]):
     for element in uniq:
         sum += element
 
+
     return sum
