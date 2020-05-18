@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-from sys import stderr
+import sys
 
 
 def safe_print_integer_err(value):
     try:
         print("{:d}".format(value))
     except Exception as error_alias:
-        print("Exception:{}".format(error_alias), file=stderr)
+        print("Exception:{}".format(error_alias), file=sys.stderr)
         return False
     else:
         return True
