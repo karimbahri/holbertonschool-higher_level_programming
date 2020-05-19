@@ -60,6 +60,9 @@ class Square:
 
     def my_print(self):
         """documentation of the methode my_print"""
+        if not self.__size:
+            print("")
+            return
         for l in range(self.__position[1]):
             print("")
         for i in range(self.__size):
@@ -67,9 +70,6 @@ class Square:
                 print(" ", end="")
             for j in range(self.__size):
                 print("#", end='')
-            print("")
-
-        if not self.__size:
             print("")
 
 
