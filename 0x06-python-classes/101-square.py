@@ -76,7 +76,6 @@ class Square:
         """documentation of the methode __repr__"""
         string = ""
         if not self.__size:
-            string = "\n"
             return string
         for l in range(self.__position[1]):
             string += '\n'
