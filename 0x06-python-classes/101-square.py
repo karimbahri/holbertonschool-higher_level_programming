@@ -72,6 +72,23 @@ class Square:
                 print("#", end='')
             print("")
 
+    def __repr__(self):
+        """documentation of the methode __repr__"""
+        string = ""
+        if not self.__size:
+            string = "\n"
+            return string
+        for l in range(self.__position[1]):
+            string += '\n'
+        for i in range(self.__size):
+            for k in range(self.__position[0]):
+                string += ' '
+            for j in range(self.__size):
+                string += '#'
+            string += "\n"
+        string = string[:-1]
+        return string
+
 
 def check_pos(position):
     """documentation of check_pos : check position is valid"""
