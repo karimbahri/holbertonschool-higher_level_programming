@@ -1,0 +1,46 @@
+>>> divide_mat = __import__("2-matrix_divided").matrix_divided
+
+>>> divide_mat([[1, 2, 3],[4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+>>> divide_mat([[1, 2, 3],[4, 5, 6]], 5)
+[[0.2, 0.4, 0.6], [0.8, 1.0, 1.2]]
+
+>>> divide_mat([[1, 2, 3],[4, 5, 6]], 3.2)
+[[0.31, 0.62, 0.94], [1.25, 1.56, 1.88]]
+
+>>> try:
+... 	divide_mat([[1, 2, 3],[4, 5, 6]], 0)
+... except Exception as error:
+... 	print(error)
+division by zero
+
+>>> try:
+... 	divide_mat([[1, "hello", 3],[4, 5, 6]], 2)
+... except Exception as error:
+... 	print(error)
+matrix must be a matrix (list of lists) of integers/floats
+
+>>> try:
+... 	divide_mat(None, 2)
+... except Exception as error:
+... 	print(error)
+matrix must be a matrix (list of lists) of integers/floats
+
+>>> try:
+... 	divide_mat([], 2)
+... except Exception as error:
+... 	print(error)
+matrix must be a matrix (list of lists) of integers/floats
+
+>>> try:
+... 	divide_mat([1, 2, 3], 2)
+... except Exception as error:
+... 	print(error)
+matrix must be a matrix (list of lists) of integers/floats
+
+>>> try:
+... 	divide_mat([[1, 2, 3],[4, 5, 5, 6]], 2)
+... except Exception as error:
+... 	print(error)
+Each row of the matrix must have the same size

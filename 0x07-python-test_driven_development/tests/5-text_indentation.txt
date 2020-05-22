@@ -1,0 +1,51 @@
+>>> ind = __import__("5-text_indentation").text_indentation
+
+>>> ind("text_indentation")
+text_indentation
+
+>>> ind("text: text")
+text:
+<BLANKLINE>
+text
+
+>>> ind("text. text")
+text.
+<BLANKLINE>
+text
+
+>>> ind("text? text")
+text?
+<BLANKLINE>
+text
+
+>>> ind("text:      text")
+text:
+<BLANKLINE>
+text
+
+>>> ind("text:		text")
+text:
+<BLANKLINE>
+text
+
+>>> ind("say my name")
+say my name
+
+>>> ind("say my name:    heisenberg ? you god damn right")
+say my name:
+<BLANKLINE>
+heisenberg ?
+<BLANKLINE>
+you god damn right
+
+>>> try:
+... 	ind(None)
+... except Exception as error:
+... 	print(error)
+text must be a string
+
+>>> try:
+... 	ind(True)
+... except Exception as error:
+... 	print(error)
+text must be a string

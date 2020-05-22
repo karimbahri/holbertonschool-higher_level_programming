@@ -1,0 +1,30 @@
+>>> p_sqr = __import__("4-print_square").print_square
+
+>>> p_sqr(5)
+#####
+#####
+#####
+#####
+#####
+
+>>> p_sqr(0)
+
+>>> try:
+... 	p_sqr(-4)
+... except Exception as error:
+... 	print(error)
+size must be >= 0
+
+>>> p_sqr(0)
+
+>>> try:
+... 	p_sqr(None)
+... except Exception as error:
+... 	print(error)
+size must be an integer
+
+>>> try:
+... 	p_sqr("None")
+... except Exception as error:
+... 	print(error)
+size must be an integers

@@ -1,0 +1,31 @@
+>>> printName = __import__("3-say_my_name").say_my_name
+
+>>> printName("Walter", "White")
+My name is Walter White
+
+>>> printName("Heisenberg")
+My name is Heisenberg 
+
+>>> try:
+... 	printName(True, 5)
+... except Exception as error:
+... 	print(error)
+first_name must be a string
+
+>>> try:
+... 	printName("True", 5)
+... except Exception as error:
+... 	print(error)
+last_name must be a string
+
+>>> try:
+... 	printName("True", None)
+... except Exception as error:
+... 	print(error)
+last_name must be a string
+
+>>> try:
+... 	printName(None)
+... except Exception as error:
+... 	print(error)
+first_name must be a string
