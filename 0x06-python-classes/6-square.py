@@ -32,13 +32,13 @@ class Square:
         """documentation of the method area: return the area of square"""
         return self.__size**2
 
-    @property
-    def size(self):
+    """@property"""
+    def size_get(self):
         """documentation of the method size: getter"""
         return self.__size
 
-    @size.setter
-    def size(self, value):
+    """@size.setter""""
+    def size_set(self, value):
         """documentation of the method size: setter"""
         if type(value) != int:
             raise TypeError("size must be an integer")
@@ -47,16 +47,20 @@ class Square:
 
         self.__size = value
 
-    @property
-    def position(self):
+    size = property(size_get, size_set)
+
+    """@property"""
+    def position_get(self):
         """the documentation of the method position: position"""
         return self.__position
 
-    @position.setter
-    def position(self, value):
+    """@position.setter"""
+    def position_set(self, value):
         """documentation of the method position: check for position"""
         if not check_pos(position):
             raise TypeError("position must be a tuple of 2 positive integers")
+
+    position = property(position_get, position_set)
 
     def my_print(self):
         """documentation of the methode my_print"""
