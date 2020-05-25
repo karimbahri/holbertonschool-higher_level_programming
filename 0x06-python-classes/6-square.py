@@ -37,7 +37,7 @@ class Square:
         """documentation of the method size: getter"""
         return self.__size
 
-    """@size.setter""""
+    """@size.setter"""
     def size_set(self, value):
         """documentation of the method size: setter"""
         if type(value) != int:
