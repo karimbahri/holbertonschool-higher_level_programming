@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
 """
     5-base_geometry
         Classes:
             Rectangle
 """
-
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 class Rectangle(BaseGeometry):
     """BaseGeometry: empty class"""
