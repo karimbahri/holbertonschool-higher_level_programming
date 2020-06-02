@@ -1,1 +1,42 @@
-test
+>>> L = __import__("1-my_list").MyList
+
+>>> ls = L([1, 2, 3, 4])
+>>> ls.print_sorted()
+[1, 2, 3, 4]
+
+>>> ls = L([1, 2, 3, 4, 10, 17])
+>>> ls.print_sorted()
+[1, 2, 3, 4, 10, 17]
+
+>>> ls = L([-17, 0, 17])
+>>> ls.print_sorted()
+[-17, 0, 17]
+
+>>> ls = L([])
+>>> ls.print_sorted()
+[]
+
+>>> try:
+...     ls = L(None)
+...     ls.print_sorted()
+... except Exception as error:
+...     pass
+
+>>> ls = L()
+>>> ls.print_sorted()
+[]
+
+>>> ls = L(['c', 'a', 'x', 'o'])
+>>> ls.print_sorted()
+['a', 'c', 'o', 'x']
+
+>>> ls = L(["italy", "spain", "greece"])
+>>> ls.print_sorted()
+['greece', 'italy', 'spain']
+
+>>> try:
+...     ls = L([10, "hello", 99, [10, 'z']])
+...     ls.print_sorted()
+... except Exception as error:
+...     pass
+... 
