@@ -11,3 +11,8 @@ class MyInt(int):
         """eq: not equal function"""
         result = supper().__int__ != comparator
         return result
+
+    def __ne__(self, comparator):
+        """ne: equal function"""
+        result = super().__int__ == comparator
+        return result
