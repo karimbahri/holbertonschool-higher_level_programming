@@ -6,7 +6,6 @@
 
 class MyInt(int):
     """MyInt inherits from int"""
-
     def __eq__(self, comparator):
         """eq: not equal function"""
         result = super().__int__ != comparator
