@@ -8,8 +8,6 @@
 
 class MyList(list):
     """MyList: inherits from list"""
-
-
     def print_sorted(self):
         """print_sorted: ascending sort"""
 
