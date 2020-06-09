@@ -19,3 +19,21 @@ class test_rectangle(unittest.TestCase):
         self.assertEqual(rect1.x, 10)
         self.assertEqual(rect1.y, 19)
         self.assertEqual(rect1.id, 44)
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(-5, 9)
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(9, 0)
+
+        with self.assertRaises(TypeError):
+            rect = Rectangle("holberton", 9)
+
+        with self.assertRaises(TypeError):
+            rect = Rectangle(9, "holberton")
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(9, 9, -3)
+
+        with self.assertRaises(ValueError):
+            rect = Rectangle(9, 9, 10, -1)
