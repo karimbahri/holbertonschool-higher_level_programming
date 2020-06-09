@@ -34,13 +34,13 @@ class Square(Rectangle):
         if len(args):
             for item in args:
                 if i == 0:
-                    self.id = item
+                    self.__id = item
                 elif i == 1:
-                    self.size = item
+                    self.__size = item
                 elif i == 2:
-                    self.x = item
+                    self.__x = item
                 elif i == 3:
-                    self.y = item
+                    self.__y = item
                 i += 1
 
         else:
