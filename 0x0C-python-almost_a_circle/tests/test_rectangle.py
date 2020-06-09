@@ -37,3 +37,7 @@ class test_rectangle(unittest.TestCase):
 
         with self.assertRaises(ValueError):
             rect = Rectangle(9, 9, 10, -1)
+
+        rect = Rectangle(2, 2)
+        self.assertEqual(rect.area(), 4)
+        self.assertEqual(str(rect), "[Rectangle] (10) 0/0 - 2/2")
