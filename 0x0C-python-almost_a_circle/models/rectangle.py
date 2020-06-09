@@ -107,6 +107,16 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
+    def to_dictionary(self):
+        """dictionary representation of the object"""
+        dict_repr = {}
+        dict_repr["id"] = self.id
+        dict_repr["width"] = self.__width
+        dict_repr["height"] = self.__height
+        dict_repr["x"] = self.__x
+        dict_repr["y"] = self.__y
+        return dict_repr
+
 
 def check_int(value, log):
     """check_int: check if value is int"""
