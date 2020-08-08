@@ -19,4 +19,4 @@ if __name__ == "__main__":
         print(element)
 
     cursor.close()
-    database.close()
+    dataBase.close()
