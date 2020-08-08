@@ -6,8 +6,8 @@ from sys import argv
 import MySQLdb
 
 if __name__ == "__main__":
-    dataBase = MySQLdb.connect(host="localhost", user=argv[3],
-                               passwd=argv[3], db=argv[3])
+    dataBase = MySQLdb.connect(host="localhost", user=argv[1],
+                               passwd=argv[2], db=argv[3])
 
     cursor = connection.cursor()
 
