@@ -6,8 +6,8 @@ from sys import argv
 import MySQLdb
 
 if __name__ == "__main__":
-    dataBase = MySQLdb.connect(host="localhost", user=argv[1],
-                               passwd=argv[2], db=argv[3], port=3306)
+    dataBase = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                               passwd=argv[2], db=argv[3])
 
     cursor = dataBase.cursor()
 
@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     rows = cursor.fetchall()
 
-    for elemeny in rows:
+    for element in rows:
         print(element)
 
     cursor.close()
