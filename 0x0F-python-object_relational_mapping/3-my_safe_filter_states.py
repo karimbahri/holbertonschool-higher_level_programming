@@ -11,11 +11,13 @@ if __name__ == "__main__":
 
     cursor = dataBase.cursor()
 
+    argument = argv[4]
+
     cursor.execute("SELECT * FROM\
                    states WHERE name\
                    LIKE BINARY '{}%'\
                    ORDER BY states.id\
-                   ASC".format(argv[4]))
+                   ASC".format(argument))
 
     rows = cursor.fetchall()
 
