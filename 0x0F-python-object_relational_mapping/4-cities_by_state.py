@@ -17,9 +17,9 @@ if __name__ == "__main__":
     cursor.execute("SELECT cities.id,\
                     cities.name,\
                     states.name FROM\
-                    states INNER JOIN\
-                    cities ON cities.state_id\
-                    = states.id ORDER\
+                    cities LEFT JOIN\
+                    states ON states.id = cities.state_id\
+                    ORDER\
                     BY cities.id")
 
     rows = cursor.fetchall()
