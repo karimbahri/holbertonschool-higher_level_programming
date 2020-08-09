@@ -25,7 +25,7 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
 
     for element in rows:
-        print(rows)
+        print(element)
 
     cursor.close()
     dataBase.close()
