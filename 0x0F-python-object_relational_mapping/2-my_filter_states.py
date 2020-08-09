@@ -19,9 +19,9 @@ if __name__ == "__main__":
                    states.id ASC"
                    .format(argv[4]))
 
-    cursor.fetchall()
+    rows = cursor.fetchall()
 
-    for element in cursor:
+    for element in rows:
         print(element)
 
     cursor.close()
