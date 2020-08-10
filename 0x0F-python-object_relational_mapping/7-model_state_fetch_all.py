@@ -15,7 +15,7 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     Session = sessionmaker(bind=engine)
-    sess = Session()
-    for element in sess.query(State).order_by(asc(State.id)):
+    session = Session()
+    for element in session.query(State).order_by(asc(State.id)):
         print("{}: {}".format(element.id, element.name))
     sess.close()
