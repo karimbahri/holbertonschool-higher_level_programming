@@ -15,6 +15,6 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     sess = Session()
-    for element in sess.query(element).order_by(asc(element.id)):
+    for element in sess.query(state).order_by(asc(state.id)):
         print("{}: {}".format(element.id, element.name))
     sess.close()
