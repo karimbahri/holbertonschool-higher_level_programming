@@ -3,7 +3,7 @@
 from model_state import Base, State
 from sys import argv
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from sqlalchemy.orm import sessionmaker, session
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://\
@@ -18,4 +18,4 @@ if __name__ == "__main__":
     session = Session()
     for element in session.query(State).order_by(asc(State.id)):
         print("{}: {}".format(element.id, element.name))
-    sess.close()
+    session.close()
