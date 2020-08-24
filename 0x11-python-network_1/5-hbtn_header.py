@@ -5,4 +5,4 @@ if __name__ == '__main__':
     import requests
     link = argv[1]
     req = requests.get(link)
-    print(req.headers["X-Request-Id"])
+    print(req.headers.get("X-Request-Id"))
