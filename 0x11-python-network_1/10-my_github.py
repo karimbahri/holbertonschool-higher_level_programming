@@ -3,6 +3,7 @@
 if __name__ == "__main__":
     import requests
     from sys import argv
+    from requests.auth import HTTPBasicAuth
     link = "https://api.github.com/user"
     user = argv[1]
     access_token = argv[2]
