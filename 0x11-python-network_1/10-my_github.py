@@ -7,4 +7,7 @@ if __name__ == "__main__":
     user = argv[1]
     access_token = argv[2]
     req = requests.get(link, auth=HTTPBasicAuth(user, access_token))
-    print(req.json()['id'])
+    try:
+        print(req.json()['id'])
+    except:
+        print("None")
