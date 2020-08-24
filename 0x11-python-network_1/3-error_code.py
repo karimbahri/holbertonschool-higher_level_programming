@@ -4,10 +4,10 @@ if __name__ == "__main__":
     from sys import argv
     from urllib import request
     import urllib
+    r = request.Request(argv[1])
     try:
-        r = request.Request(argv[1])
         with request.urlopen(r) as res:
             res = ress.read()
-            print(res.decode('utf-8')
+            print(res.decode('utf-8'))
     except urllib.error.HTTPError as error:
         print("Error code:", error.code)
