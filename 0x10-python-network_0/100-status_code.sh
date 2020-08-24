@@ -1,3 +1,3 @@
 #!/bin/bash
 # curl request link as arg
-curl -sw "%{http_code}" "$1"
+curl -o /dev/null -s -w "%{http_code}" "$1"
