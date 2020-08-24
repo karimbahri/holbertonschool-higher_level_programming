@@ -5,4 +5,4 @@ if __name__ == "__main__":
     print("Body response:")
     req = requests.get('https://intranet.hbtn.io/status')
     print("\t- type: {}".format(type(req.text)))
-    print("\t- content {}".format(req.text))
+    print("\t- content: {}".format(req.text))
