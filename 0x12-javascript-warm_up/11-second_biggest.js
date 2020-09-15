@@ -2,7 +2,7 @@
 
 const len = process.argv.length;
 
-let max1 = 0;
+let max1 = -9999999999;
 let max2 = 0;
 
 for (let i = 0; i < len; i++) {
