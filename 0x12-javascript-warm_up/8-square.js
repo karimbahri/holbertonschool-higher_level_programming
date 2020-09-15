@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 if (isNaN(process.argv[2])) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   let sqr = '';
   for (let i = 0; i < process.argv[2]; i++) {
